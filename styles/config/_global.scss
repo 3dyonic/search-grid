@@ -1,0 +1,19 @@
+$spacing-unit: 10px;
+$spacing-container: 4 * $spacing-unit;
+
+// Media breakpoints
+$breakpoints: (
+  sm: 480,
+  md: 768px,
+  lg: 1025px,
+  xl: 1440px,
+  xxl: 1920px
+);
+
+
+$font-aktivgrotest: "Aktivgrotest";
+$base-font: $font-aktivgrotest;
+$fallback-font: "sans-serif";
+
+//Fonts
+$font-aktivgrotest-reg: "aktivgrotesk-regular";

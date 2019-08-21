@@ -1,0 +1,16 @@
+{
+  "name": "elementor_search_grid_exercise",
+  "version": "1.0.0",
+  "description": "dashboard grid with cards",
+  "main": "",
+  "scripts": {
+    "test": "",
+    "scss": "node-sass --watch styles -o css",
+    "scssRefs": "node-sass --watch scssRefs -o scssRefs/css"
+  },
+  "author": "yonatan lev ari",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

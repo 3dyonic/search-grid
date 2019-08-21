@@ -1,0 +1,13 @@
+$footer: (
+  height: 85px,
+  background-color: #424856,
+  padding-x: $spacing-container
+);
+
+.footer {
+  display: flex;
+  background-color: map-get($footer, background-color);
+  padding-right: map-get($footer, padding-x);
+  padding-left: map-get($footer, padding-x);
+  height: map-get($footer, height);
+}

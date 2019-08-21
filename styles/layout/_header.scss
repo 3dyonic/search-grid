@@ -1,0 +1,15 @@
+$header: (
+  height: 85px,
+  background: linear-gradient(90deg, #242a36 0%, #3c424f 100%),
+  padding-x: $spacing-container
+);
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: map-get($header, background);
+  padding-right: map-get($header, padding-x);
+  padding-left: map-get($header, padding-x);
+  height: map-get($header, height);
+}

@@ -1,0 +1,10 @@
+@include fontFace($font-aktivgrotest, $font-aktivgrotest-reg);
+
+body {
+  font-family: $base-font, $fallback-font;
+}
+
+input,
+button {
+  font-family: inherit;
+}

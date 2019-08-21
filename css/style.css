@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0; }
+  *, *::before, *::after {
+    box-sizing: border-box; }
+
+@font-face {
+  font-family: "Aktivgrotest";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Aktivgrotest"), local("aktivgrotesk-regular"), url("../assets/fonts//aktivgrotesk-regular.woff2") format("woff2"), url("../assets/fonts//aktivgrotesk-regular.woff") format("woff"), url("../assets/fonts//aktivgrotesk-regular.ttf") format("truetype"); }
+
+body {
+  font-family: "Aktivgrotest", "sans-serif"; }
+
+input,
+button {
+  font-family: inherit; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.footer {
+  display: flex;
+  background-color: #424856;
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 85px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #242a36 0%, #3c424f 100%);
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 85px; }
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(208, 208, 208, 0.61);
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 67px; }
+  .page-head__results {
+    display: flex;
+    align-items: center; }
+
+.page {
+  display: flex;
+  flex-grow: 1; }
+  .page__aside {
+    flex: 0 1 364px;
+    border-right: 1px solid rgba(208, 208, 208, 0.61); }
+  .page__main {
+    flex-grow: 1;
+    background: #eff2f3; }
