@@ -8,6 +8,7 @@ $page-head: (
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   border: map-get($page-head, border);
   padding-right: map-get($page-head, padding-x);
   padding-left: map-get($page-head, padding-x);

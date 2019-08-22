@@ -1,18 +1,54 @@
 $page: (
-  main: ()
+  main: (
+    padding: 20px,
+    rows: (
+      number: 9,
+      height: 150px
+    ),
+    columns: (
+      width: 300px
+    ),
+    gap: 20px
+  )
 );
 
 .page {
   display: flex;
   flex-grow: 1;
+  position: relative;
 
   &__aside {
-    flex: 0 1 364px;
     border-right: 1px solid rgba(208, 208, 208, 0.61);
+    background-color: white;
+    @include media-min(md) {
+      min-width: 364px;
+    }
+    @include media-max(md) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 10vw;
+      z-index: 100;
+    }
   }
 
   &__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-template-rows: repeat(9, 150px);
+    grid-gap: 20px;
+    padding: 40px;
     flex-grow: 1;
     background: #eff2f3;
+    @include media-min(md) {
+      grid-template-columns: 1fr;
+    }
+    @include media-min(lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media-min(xl) {
+      grid-template-columns: repeat(3, minmax(350px, 1fr));
+    }
   }
 }

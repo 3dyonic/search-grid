@@ -10,6 +10,10 @@
   font-style: normal;
   src: local("Aktivgrotest"), local("aktivgrotesk-regular"), url("../assets/fonts//aktivgrotesk-regular.woff2") format("woff2"), url("../assets/fonts//aktivgrotesk-regular.woff") format("woff"), url("../assets/fonts//aktivgrotesk-regular.ttf") format("truetype"); }
 
+html {
+  width: 100vw;
+  overflow-x: hidden; }
+
 body {
   font-family: "Aktivgrotest", "sans-serif"; }
 
@@ -42,6 +46,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   border: 1px solid rgba(208, 208, 208, 0.61);
   padding-right: 40px;
   padding-left: 40px;
@@ -52,10 +57,68 @@ button {
 
 .page {
   display: flex;
-  flex-grow: 1; }
+  flex-grow: 1;
+  position: relative; }
   .page__aside {
-    flex: 0 1 364px;
-    border-right: 1px solid rgba(208, 208, 208, 0.61); }
+    border-right: 1px solid rgba(208, 208, 208, 0.61);
+    background-color: white; }
+    @media only screen and (min-width: 768px) {
+      .page__aside {
+        min-width: 364px; } }
+    @media only screen and (max-width: 767px) {
+      .page__aside {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 10vw;
+        z-index: 100; } }
   .page__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 40px;
     flex-grow: 1;
     background: #eff2f3; }
+    @media only screen and (min-width: 768px) {
+      .page__main {
+        grid-template-columns: 1fr; } }
+    @media only screen and (min-width: 1025px) {
+      .page__main {
+        grid-template-columns: 1fr 1fr; } }
+    @media only screen and (min-width: 1440px) {
+      .page__main {
+        grid-template-columns: repeat(3, minmax(350px, 1fr)); } }
+
+.avatar {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 2px solid green;
+  background-color: white; }
+  .avatar__image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%; }
+
+.card {
+  background: red;
+  padding: 20px; }
+  .card__image {
+    width: calc(100% + 40px);
+    margin: -20px; }
+  .card__avatar {
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-bottom: 10px; }
+  .card__seperator {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .card__title {
+    margin-bottom: 10px; }
+  .card__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }

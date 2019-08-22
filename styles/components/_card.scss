@@ -1,0 +1,29 @@
+.card {
+  background: red;
+  padding: 20px;
+
+  &__image {
+    width: calc(100% + 40px);
+    margin: -20px;
+  }
+
+  &__avatar {
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+  &__seperator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
