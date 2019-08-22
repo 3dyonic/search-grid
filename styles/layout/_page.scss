@@ -36,7 +36,7 @@ $page: (
   &__main {
     display: grid;
     grid-template-columns: 1fr;
-    // grid-template-rows: repeat(9, 150px);
+    grid-auto-rows: minmax(min-content, max-content);
     grid-gap: 20px;
     padding: 40px;
     flex-grow: 1;

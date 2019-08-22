@@ -10,6 +10,11 @@ $breakpoints: (
   xxl: 1920px
 );
 
+$radius-sm: 3px;
+$radius-md: 4px;
+
+$font-noraml: 400;
+$font-bold: 700;
 
 $font-aktivgrotest: "Aktivgrotest";
 $base-font: $font-aktivgrotest;
@@ -17,3 +22,4 @@ $fallback-font: "sans-serif";
 
 //Fonts
 $font-aktivgrotest-reg: "aktivgrotesk-regular";
+$font-aktivgrotest-bold: "aktivgrotesk-bold";

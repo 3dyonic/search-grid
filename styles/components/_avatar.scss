@@ -2,11 +2,19 @@
   width: 95px;
   height: 95px;
   border-radius: 50%;
-  border: 2px solid green;
-  background-color: white;
+  position: relative;
+  text-align: center;
   &__image {
     border-radius: 50%;
     overflow: hidden;
     width: 100%;
+    border:10px solid white;
+  }
+  &__chart {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 1;
   }
 }

@@ -8,3 +8,13 @@
     box-sizing: border-box;
   }
 }
+
+button {
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+.o-btn {
+  height: 40px;
+  width: 157px;
+  text-transform: uppercase;
+  &--ghost {
+    border: 1.5px solid currentColor;
+    border-radius: 32.5px;
+    background-color: transparent;
+    color: #27c0ff;
+  }
+}

@@ -1,193 +1,123 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="assets/images/elementor-favicons-32x32.png" sizes="32x32" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="assets/images/elementor-favicons-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Search</title>
 </head>
 
 <body>
-  <div class="app">
-    <header class="header">
-      <div class="header__logo"></div>
-      <div class="header__actions">
-        <button class="btn btn--ghost">login</button>
-      </div>
-    </header>
-    <section class="page-head">
-      <div class="page-head__results">
-        <div class="results">
-          <h1 class="results__title">Filter results <span class="results__num">(15)</span></h1>
-        </div>
-        <button class="btn btn-clear">Clear all</button>
-      </div>
-      <div class="page-head__search">
-        <div class="search">
-          <input type="text" placeholder="What do you need help with?" />
-        </div>
-      </div>
-    </section>
-    <section class="page">
-      <div class="page__aside">aside </div>
-      <div class="page__main">
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
+    <div class="app">
+        <header class="header">
+            <div class="header__logo"></div>
+            <div class="header__actions">
+                <button class="o-btn o-btn--ghost">login</button>
             </div>
-            <div>
-              <div>chips</div>
+        </header>
+        <section class="page-head">
+            <div class="page-head__results">
+                <div class="results">
+                    <h1 class="results__title">Filter results <span class="results__num">(15)</span></h1>
+                </div>
+                <button class="btn btn-clear">Clear all</button>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
+            <div class="page-head__search">
+                <div class="search">
+                    <input type="text" placeholder="What do you need help with?" />
+                </div>
             </div>
-            <div>
-              <div>chips</div>
+        </section>
+        <section class="page">
+            <div class="page__aside">
+                <label class="o-checkbox">
+                    <input type="checkbox" checked="checked">
+                    <span class="o-checkbox__checkmark"></span>
+                    <div class="o-checkbox__label">one</div>
+                </label>
+                <!--radio-->
+                <label class="o-radio">One
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="o-radio__checkmark"></span>
+                </label>
+                <label class="o-radio">One
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="o-radio__checkmark"></span>
+                </label>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
+            <div class="page__main">
+                <div class="card">
+                    <img class="card__image" srcset="assets/images/designers/cover-small-01.png, 
+                    assets/images/designers/cover-small-01@2x.png 2x"
+                        src="assets/images/designers/cover-small-01.png" alt="Marguerite Anderson cover work" />
+                    <div class="card__avatar avatar">
+                        <svg class="avatar__chart donut-chart" viewBox="0 0 95 95" class="donut" style="
+                            --size-development:25; 
+                            --size-marketing:48;
+                            --size-design:288;
+                            --offset-marketing:-25;
+                            --offset-design:-72;
+                            ">
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-development)" stroke-width="7"
+                                stroke-dasharray="var(--size-development) 1000" stroke-dashoffset="0" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-marketing)" stroke-width="7"
+                                stroke-dasharray="var(--size-marketing) 1000"
+                                stroke-dashoffset="var(--offset-marketing)" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-design)" stroke-width="7" stroke-dasharray="var(--size-design) 1000"
+                                stroke-dashoffset="var(--offset-design)" transform="">
+                            </circle>
+                        </svg>
+                        <img class="avatar__image" srcset="assets/images/designers/avatar-small-01.png,
+                        assets/images/designers/avatar-small-01@2x.png 2x"
+                            src="assets/images/designers/avatar-small-01.png" alt="Marguerite Anderson profile image"/>
+                    </div>
+                    <div class="card__body">
+                        <h2 class="card__title">Marguerite Anderson</h2>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim</p>
+                    </div>
+                    <hr class="seperator" />
+                    <div class="card__info">
+                        <div class="card__data">
+                            <div class="type-data">Jerusalem - GMT+2</div>
+                            <div class="type-data">English, Spanish, Hebrew</div>
+                        </div>
+                        <div class="card__labels">
+                            <div class="chip chip--design">
+                                <div class="chip__label">web design</div>
+                            </div>
+                            <div class="chip chip--design">
+                                <div class="chip__label">mobile-responsive</div>
+                            </div>
+                            <div class="chip chip--design">
+                                <div class="chip__label">graphic design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div>chips</div>
+        </section>
+        <footer class="footer">
+            <div class="footer__logo"></div>
+            <ul class="links">
+                <li class="links__item link"></li>
+                <li class="links__item link"></li>
+                <li class="links__item link"></li>
+                <li class="links__item link"></li>
+            </ul>
+            <div class="footer__overline">
+                <div class="mdl-reindex"></div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
-            </div>
-            <div>
-              <div>chips</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
-            </div>
-            <div>
-              <div>chips</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
-            </div>
-            <div>
-              <div>chips</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__image" src="assets/images/designers/cover-small-01.png" />
-          <div class="card__avatar avatar">
-            <img class="avatar__image" src="assets/images/designers/avatar-small-01.png"/>
-          </div>
-          <div class="card__body">
-            <div class="card__title">Marguerite Anderson</div>
-            <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor
-              nibh, sit amet tempor nibh finibus et. Aenean eu enim</div>
-          </div>
-          <hr class="card__seperator" />
-          <div class="card__info">
-            <div>
-              <div>data</div>
-            </div>
-            <div>
-              <div>chips</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer__logo"></div>
-      <ul class="links">
-        <li class="links__item link"></li>
-        <li class="links__item link"></li>
-        <li class="links__item link"></li>
-        <li class="links__item link"></li>
-      </ul>
-      <div class="footer__overline">
-        <div class="mdl-reindex"></div>
-      </div>
-    </footer>
-  </div>
+        </footer>
+    </div>
 </body>
 
 </html>

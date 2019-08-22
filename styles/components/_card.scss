@@ -1,6 +1,40 @@
+$card: (
+  border-radius: $radius-sm $radius-sm 0 0,
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+  background: white,
+  padding: 20px,
+  image: (
+    width: calc(100% + 40px),
+    margin: -20px
+  ),
+  avatar: (
+    margin-top: -20px,
+    margin-bottom: 10px
+  ),
+  title: (
+    margin-bottom: 10px,
+    line-height: 31px,
+    letter-spacing: -0.67px,
+    font-size: 24px,
+    color: #191d25
+  ),
+  text: (
+    text-align: center,
+    line-height: 19px,
+    color: #6d7278,
+    font-size: 13px
+  ),
+  labels: (
+    width: 150px
+  )
+);
+
 .card {
-  background: red;
+  border-radius: $radius-sm $radius-sm 0 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background: white;
   padding: 20px;
+  overflow: hidden;
 
   &__image {
     width: calc(100% + 40px);
@@ -14,16 +48,35 @@
     margin-top: -20px;
     margin-bottom: 10px;
   }
-  &__seperator {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+
   &__title {
     margin-bottom: 10px;
+    text-align: center;
+    line-height: 31px;
+    letter-spacing: -0.67px;
+    font-size: 24px;
+    color: #191d25;
   }
+
+  &__text {
+    text-align: center;
+    line-height: 19px;
+    color: #6d7278;
+    font-size: 13px;
+  }
+
   &__info {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__data {
+  }
+
+  &__labels {
+    width: 150px;
+    text-align: right;
+    margin-left: auto;
   }
 }
