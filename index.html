@@ -26,32 +26,44 @@
             </div>
             <div class="page-head__search">
                 <div class="search">
-                    <input type="text" placeholder="What do you need help with?" />
+                    <input type="text" class="search_control" placeholder="What are you looking for?">
+                    <button type="submit" class="search__button btn-clear">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
             </div>
         </section>
         <section class="page">
             <div class="page__aside">
-                <label class="o-checkbox">
-                    <input type="checkbox" checked="checked">
-                    <span class="o-checkbox__checkmark"></span>
-                    <div class="o-checkbox__label">one</div>
-                </label>
-                <!--radio-->
-                <label class="o-radio">One
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="o-radio__checkmark"></span>
-                </label>
-                <label class="o-radio">One
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="o-radio__checkmark"></span>
-                </label>
+                <div class="panel">
+                    <div class="panel__head">
+                        <div>title</div>
+                        <div>close</div>
+                    </div>
+                    <div class="panel__body">
+                        <label class="o-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">one</div>
+                        </label>
+                        <!--radio-->
+                        <label class="o-radio">One
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                        </label>
+                        <label class="o-radio">One
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="panel__expand">+ expand</div>
+                </div>
             </div>
             <div class="page__main">
                 <div class="card">
                     <img class="card__image" srcset="assets/images/designers/cover-small-01.png, 
-                    assets/images/designers/cover-small-01@2x.png 2x"
-                        src="assets/images/designers/cover-small-01.png" alt="Marguerite Anderson cover work" />
+                    assets/images/designers/cover-small-01@2x.png 2x" src="assets/images/designers/cover-small-01.png"
+                        alt="Marguerite Anderson cover work" />
                     <div class="card__avatar avatar">
                         <svg class="avatar__chart donut-chart" viewBox="0 0 95 95" class="donut" style="
                             --size-development:25; 
@@ -76,7 +88,7 @@
                         </svg>
                         <img class="avatar__image" srcset="assets/images/designers/avatar-small-01.png,
                         assets/images/designers/avatar-small-01@2x.png 2x"
-                            src="assets/images/designers/avatar-small-01.png" alt="Marguerite Anderson profile image"/>
+                            src="assets/images/designers/avatar-small-01.png" alt="Marguerite Anderson profile image" />
                     </div>
                     <div class="card__body">
                         <h2 class="card__title">Marguerite Anderson</h2>
