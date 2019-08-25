@@ -1,25 +1,21 @@
-# Layout A 
-job interview assignment by Yonatan Lev Ari
+# Search Grid Example 
+assignment by Yonatan Lev Ari
 
 ## Specification
-1. Ratio between lead and default items is 3:1
-1. Breakpoint at width 40rem
-1. No media query
-1. Visual referance is in the referance folder
+1. build responsive page according to design. 
 
 ## Development dependencies:
 simple npm configuration with node sass
 
 
 ### Highlights
-A simple html component with scss setup.  
-This exercise demonstrate a flex based responsive layout without media queries. 
+A design system focused solution.  
+component based.  
 
 #### Expected beheviour: 
-1. Layout container with two items
-1. Items are stacked until a defined threshold (specified at 40rem). 
-1. Beyond the threshold items are side by side with ratio of 3:1
-1. ratio and breakpoint are configurable by mixin at the 'item' selector level.
+1. responsive.
+1. can be maintained on a large scale.
+1. pixel perfect
 
 ## Styling methods: 
 - scss with sass-lint configuration
@@ -35,24 +31,27 @@ This exercise demonstrate a flex based responsive layout without media queries.
 - Rule based linting
 
 
-### Styling dependencies: 
-- Since i wanted to simulate a real use case i chose the seperate between the component to external layers.
-- external layers for this example are:
-  - global config (containing the style guide and semantic tokens, very minimalistic for this component example)
-  - base layer (reset)
-  - tools layer (mixins, functions, per this example they are on the same file, in larger project they will be seperated and loaded with _mixins, _functions loader via the utils loader)
-  - altough i could easily avoid the mixin and function used here i belive it is good practise to assume global use for these usecases.
+### Issues with Design: 
+- no style guide, i had to interpet from design, hard to invent semantics and relationships.
+- for this reason i have very few utils and atomic related classes, 
+  - this can be amended quickly when we need because function and token based approach for configuring my components.
+  - used based unit of 10pixels, floored and cieled fy units of 5pixels when needed, for consistency,
+- provided design was not component based. 
+  - provided desing was delivered with max resoution, much harder to interept for mobile. 
+  - i created mobile solution, as i understood from design logic.
+  - side bar menu added.
+- no icons and fonts provided
+  - i imporvised, the hacked font i used have some line height issues. (i hacked it, but it is controlled by a flag and a mixin and can easily be turned off),
+  - used some referanced fonts.
+  - used referance logo.
+
+### not deliverd: 
+- range selector (in real life the is an external component)
+- drop down select (in real life the is an external component)
+
+### PIXEL PERFECT defect: 
+- card content is not identical because assets where missing. 
+
 
 ### Notes:
-For this example css folder contains the final output in styles.css but also contains:  
-- global.css  
-- layout-a.css  
-i did it so we can also bench mark standalone output. 
-therfore these files are not prefixed with '_" (against the common practise).
-
-#### Performance statistics:
-External requests: 0  
-Global Size: 90 bytes  
-Component Size: 351 bytes  
-Total: 442 bytes    
-Lint Errors: 0
+total work is circa 9 hours.
