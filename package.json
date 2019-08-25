@@ -5,8 +5,7 @@
   "main": "",
   "scripts": {
     "test": "",
-    "scss": "node-sass --watch styles -o css",
-    "scssRefs": "node-sass --watch scssRefs -o scssRefs/css"
+    "scss": "node-sass --watch styles -o css"
   },
   "author": "yonatan lev ari",
   "license": "ISC",

@@ -1,54 +1,80 @@
+// LAYOUT: MAIN PAGE
+
 $page: (
+  aside: (
+    border-right: 1px solid rgba(color(brand, border), 0.61),
+    background-color: color(brand, secondary-bg),
+    max-md: (
+      right: 10vw,
+      z-index: z-map(menu-overlay)
+    ),
+    min-md: (
+      width: 364px
+    )
+  ),
   main: (
-    padding: 20px,
-    rows: (
-      number: 9,
-      height: 150px
-    ),
+    padding: $spacing-container $spacing-container spacing(24) $spacing-container,
+    rows: minmax(min-content, max-content),
     columns: (
-      width: 300px
+      base: 1fr,
+      min-lg: 1fr 1fr,
+      min-xl: repeat(3, minmax(300px, 1fr))
     ),
-    gap: 20px
+    gap: spacing(2),
+    background-color: color(brand, primary-bg)
   )
 );
 
 .page {
   display: flex;
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
+
+  &__filter {
+    @include btn-icon-round;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+
+    &:focus {
+      ~ .#{page}__aside {
+        display: block;
+      }
+    }
+  }
 
   &__aside {
-    border-right: 1px solid rgba(208, 208, 208, 0.61);
-    background-color: white;
-    @include media-min(md) {
-      min-width: 364px;
-    }
+    border-right: map-deep-get($page, aside, border-right);
+    background-color: map-deep-get($page, aside, background-color);
+    overflow-y: auto;
     @include media-max(md) {
+      display: none;
       position: absolute;
-      left: 0;
       top: 0;
+      right: map-deep-get($page, aside, max-md, right);
       bottom: 0;
-      right: 10vw;
-      z-index: 100;
+      left: 0;
+      z-index: map-deep-get($page, aside, max-md, z-index);
+    }
+    @include media-min(md) {
+      min-width: map-deep-get($page, aside, min-md, width);
     }
   }
 
   &__main {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(min-content, max-content);
-    grid-gap: 20px;
-    padding: 40px;
     flex-grow: 1;
-    background: #eff2f3;
-    @include media-min(md) {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: #{map-deep-get($page, main, columns, base)};
+    grid-auto-rows: #{map-deep-get($page, main, rows)};
+    grid-gap: map-deep-get($page, main, gap);
+    background-color: map-deep-get($page, main, background-color);
+    padding: map-deep-get($page, main, padding);
+
     @include media-min(lg) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: #{map-deep-get($page, main, columns, min-lg)};
     }
     @include media-min(xl) {
-      grid-template-columns: repeat(3, minmax(350px, 1fr));
+      grid-template-columns: #{map-deep-get($page, main, columns, min-xl)};
     }
   }
 }

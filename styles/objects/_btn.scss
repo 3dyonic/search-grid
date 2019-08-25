@@ -1,11 +1,63 @@
-.o-btn {
-  height: 40px;
-  width: 157px;
+$btn: (
+  height: 40px,
+  width: 160px,
+  line-height: type(line-height, control),
+  font-size: type(control)
+);
+
+@mixin btn {
+  //todo: should be argument driven when needed
+  min-width: map-deep-get($btn, width);
+  height: map-deep-get($btn, height);
   text-transform: uppercase;
+  line-height: map-deep-get($btn, line-height);
+  font-size: map-deep-get($btn, font-size);
+
+  .#{o-btn}__label {
+    //font line fix
+    @include font-adjust(3px, $position: relative);
+  }
+}
+
+$btn-ghost: (
+  border: 2px solid currentColor,
+  border-radius: 30px,
+  background-color: transparent,
+  color: color(dodger-blue)
+);
+@mixin btn-ghost {
+  //todo: should be argument driven when needed
+  border: map-deep-get($btn-ghost, border);
+  border-radius: map-deep-get($btn-ghost, border-radius);
+  background-color: transparent;
+  color: map-deep-get($btn-ghost, color);
+}
+
+$btn-icon-round: (
+  border: 1px solid color(brand, system-alt),
+  padding: spacing(1),
+  font-size: 20px,
+  size: 40px,
+  height: 40px,
+  border-radius: $radius-round,
+  background-color: color(brand, light)
+);
+
+@mixin btn-icon-round {
+  //todo: should be argument driven when needed
+  border: map-deep-get($btn-icon-round, border);
+  border-radius: map-deep-get($btn-icon-round, border-radius);
+  background-color: map-deep-get($btn-icon-round, background-color);
+  padding: map-deep-get($btn-icon-round, padding);
+  width: map-deep-get($btn-icon-round, size);
+  height: map-deep-get($btn-icon-round, size);
+  font-size: map-deep-get($btn-icon-round, font-size);
+}
+
+.o-btn {
+  @include btn;
+
   &--ghost {
-    border: 1.5px solid currentColor;
-    border-radius: 32.5px;
-    background-color: transparent;
-    color: #27c0ff;
+    @include btn-ghost;
   }
 }

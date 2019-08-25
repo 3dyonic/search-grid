@@ -1,0 +1,17 @@
+@mixin type-data {
+  line-height: type(line-height, text, secondary);
+  font-size: type(text);
+
+  &:not(:last-child) {
+    margin-bottom: spacing(1.5);
+  }
+}
+
+.c-type-data {
+  @include type-data;
+
+  &__icon {
+    margin-right: spacing(0.5);
+    font-size: 2rem;
+  }
+}

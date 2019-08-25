@@ -1,13 +1,74 @@
-.panel {
-  padding: 40px;
-  border-bottom: 1px solid #eff2f3;
+// COMPONENT PANEL
+
+$panel: (
+  border-bottom: 1px solid color(porcelain),
+  padding: spacing(2) spacing(4) spacing(3),
+  head: (
+    margin-bottom: spacing(2),
+    line-height: type(line-height, control),
+    font-size: type(control),
+    font-weight: $font-bold,
+    clear: ()
+  ),
+  clear: (
+    margin-right: spacing(0.5),
+    line-height: type(line-height, control),
+    font-size: type(control)
+  ),
+  toggle: (
+    size: 12px
+  ),
+  body: (
+    margin-bottom: spacing(2)
+  ),
+  show-more: (
+    color: color(brand, action),
+    icon: (
+      margin-right: spacing(0.5)
+    )
+  )
+);
+
+.c-panel {
+  border-bottom: map-deep-get($panel, border-bottom);
+  padding: map-deep-get($panel, padding);
 
   &__head {
     display: flex;
+    flex: 1;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: map-deep-get($panel, head, margin-bottom);
+    text-transform: uppercase;
+    line-height: map-deep-get($panel, head, line-height);
+    font-size: map-deep-get($panel, head, font-size);
+    font-weight: map-deep-get($panel, head, font-weight);
   }
-  &__body:not(:last-of-type) {
-    margin-bottom: 20px;
+
+  &__clear {
+    margin-right: map-deep-get($panel, clear, margin-right);
+    text-transform: capitalize;
+    line-height: map-deep-get($panel, clear, line-height);
+    font-size: map-deep-get($panel, clear, font-size);
+  }
+
+  &__toggle {
+    font-size: map-deep-get($panel, toggle, size);
+  }
+
+  &__body:not(:last-child) {
+    margin-bottom: map-deep-get($panel, body, margin-bottom);
+  }
+
+  &__show-more {
+    color: map-deep-get($panel, show-more, color);
+  }
+
+  &__show-more-icon {
+    @include font-adjust(-2px);
+    margin-right: map-deep-get($panel, show-more, icon, margin-right);
+  }
+
+  &--colapsed {
+    flex: 0;
   }
 }

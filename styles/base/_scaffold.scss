@@ -1,16 +1,29 @@
+// SCAFFOLD: Root style definitions
+
 @include fontFace($font-aktivgrotest, $font-aktivgrotest-reg);
 @include fontFace($font-aktivgrotest, $font-aktivgrotest-bold, $font-bold);
 
 html {
   width: 100vw;
   overflow-x: hidden;
+  font-size: $rem-font-reset;
 }
 
 body {
+  color: color(brand, body);
   font-family: $base-font, $fallback-font;
+  font-size: $browser-defualt-font-size;
 }
 
-input,
-button {
-  font-family: inherit;
+hr {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+::placeholder {
+  color: color(brand, body);
+  opacity: 1;
 }

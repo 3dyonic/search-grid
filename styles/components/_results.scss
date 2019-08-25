@@ -1,0 +1,35 @@
+$results: (
+  title: (
+    font-size: type(title),
+    line-height: type(line-height, title),
+    color: color(brand, title)
+  ),
+  num: (
+    line-height: type(l-h-23),
+    font-size: type(18)
+  ),
+  clear: (
+    line-height: type(l-h-21),
+    font-size: type(base),
+    margin-left: spacing(6)
+  )
+);
+
+.c-results {
+  &__title {
+    line-height: map-deep-get($results, title, line-height);
+    font-size: map-deep-get($results, title, font-size);
+    color: map-deep-get($results, title, color);
+  }
+
+  &__num {
+    line-height: map-deep-get($results, num, line-height);
+    font-size: map-deep-get($results, num, font-size);
+  }
+
+  &__clear {
+    margin-left: map-deep-get($results, clear, margin-left);
+    line-height: map-deep-get($results, clear, line-height);
+    font-size: map-deep-get($results, clear, font-size);
+  }
+}

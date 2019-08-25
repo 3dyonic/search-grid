@@ -1,3 +1,5 @@
+// RESET: baseline resets on HTML tags.
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +12,31 @@
 }
 
 button {
+  outline: none;
+  border: 0;
   box-shadow: none;
   background-color: transparent;
-  border: 0;
-  outline: none;
+
   &:not([disabled]) {
     cursor: pointer;
   }
+}
+
+input,
+button {
+  color: inherit;
+  font-family: inherit;
+}
+
+input {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
 }

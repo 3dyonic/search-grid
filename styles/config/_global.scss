@@ -1,7 +1,12 @@
+// Pathes
+$path-assets: "../assets/";
+$path-fonts: #{$path-assets + "fonts/"};
+
+// GLOBALS
+// - SPACING
 $spacing-unit: 10px;
 $spacing-container: 4 * $spacing-unit;
-
-// Media breakpoints
+// - Media breakpoints
 $breakpoints: (
   sm: 480,
   md: 768px,
@@ -10,16 +15,15 @@ $breakpoints: (
   xxl: 1920px
 );
 
+// - Radius
+$radius-xs: 2px;
 $radius-sm: 3px;
 $radius-md: 4px;
+$radius-round: 50%;
 
-$font-noraml: 400;
-$font-bold: 700;
+// Transitions and animations
+$timing-default: 0.2s;
+$animation-default: ease-in-out;
 
-$font-aktivgrotest: "Aktivgrotest";
-$base-font: $font-aktivgrotest;
-$fallback-font: "sans-serif";
-
-//Fonts
-$font-aktivgrotest-reg: "aktivgrotesk-regular";
-$font-aktivgrotest-bold: "aktivgrotesk-bold";
+//DEV & debug
+$font-adjust: true;

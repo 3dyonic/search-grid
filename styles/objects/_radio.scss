@@ -1,57 +1,77 @@
+// OBJECTS: RADIO,a simple hack to customize radio inputs
+
+$radio: (
+  margin-bottom: spacing(1.5),
+  line-height: type(line-height, control),
+  font-size: type(control),
+  checkmark: (
+    margin-right: spacing(1.5),
+    border: 2px solid color(aluminium),
+    border-radius: $radius-round,
+    background-color: color(brand, secondary-bg),
+    size: 18px,
+    after: (
+      background-color: color(brand, selected),
+      size: 10px
+    )
+  ),
+  label: (
+    color-checked: color(brand, selected)
+  )
+);
+
 .o-radio {
-  display: block;
+  display: flex;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  align-items: center;
+  margin-bottom: map-deep-get($radio, margin-bottom);
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  line-height: map-deep-get($radio, line-height);
+  font-size: map-deep-get($radio, font-size);
   user-select: none;
 
-  /* Hide the browser's default radio button */
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
+
+    &:checked {
+      ~ .o-radio__checkmark {
+        &::after {
+          content: "";
+        }
+      }
+
+      ~ .o-radio__label {
+        color: map-deep-get($radio, label, color-checked);
+      }
+    }
   }
 
-  /* Create a custom radio button */
   &__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
+    position: relative;
+    margin-right: map-deep-get($radio, checkmark, margin-right);
+    border: map-deep-get($radio, checkmark, border);
+    border-radius: map-deep-get($radio, checkmark, border-radius);
+    background-color: map-deep-get($radio, checkmark, background-color);
+    width: map-deep-get($radio, checkmark, size);
+    height: map-deep-get($radio, checkmark, size);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border-radius: map-deep-get($radio, checkmark, border-radius);
+      background-color: map-deep-get($radio, checkmark, after, background-color);
+      width: map-deep-get($radio, checkmark, after, size);
+      height: map-deep-get($radio, checkmark, after, size);
+    }
   }
 
-  /* When the radio button is checked, add a blue background */
-  input:checked ~ .o-radio__checkmark {
-    background-color: #2196f3;
-  }
-
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  &__checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  /* Show the indicator (dot/circle) when checked */
-  input:checked ~ .o-radio__checkmark:after {
-    display: block;
-  }
-
-  /* Style the indicator (dot/circle) */
-  &__checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
+  &__label {
+    text-transform: capitalize;
   }
 }

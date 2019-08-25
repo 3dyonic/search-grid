@@ -1,0 +1,23 @@
+$links: (
+  item: (
+    margin-right: spacing(1.5)
+  )
+);
+
+.c-links {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    min-height: 16px;
+
+    &:not(:first-child) {
+      padding-left: map-deep-get($links, item, margin-right);
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #5d6670;
+      padding-right: map-deep-get($links, item, margin-right);
+    }
+  }
+}

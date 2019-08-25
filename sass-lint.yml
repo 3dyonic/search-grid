@@ -422,9 +422,9 @@ rules:
       allowed-functions : [
       rgba,
       map-deep-get,
-      brand,
+      color,
       type,
-      color
+      z-map
       ]
   zero-unit:
     - 1

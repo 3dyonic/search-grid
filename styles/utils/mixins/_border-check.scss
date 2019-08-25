@@ -1,0 +1,12 @@
+// MIXIN: BORDER-CHECK
+// Creates a border-hack check mark.
+// arguments: width, height,color(optional)
+
+@mixin border-check($width, $height, $color: inherit, $border-width: 1px) {
+  transform: rotate(45deg);
+  border: solid currentColor;
+  border-width: 0 $border-width $border-width 0;
+  width: $width;
+  height: $height;
+  color: $color;
+}

@@ -1,0 +1,7 @@
+// MIXIN: FONT-ADJUST
+// fix for font line-height issues
+
+@mixin font-adjust($adjust, $property: top, $position: null) {
+  position: $position;
+  #{$property}: $adjust;
+}

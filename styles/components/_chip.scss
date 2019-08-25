@@ -1,48 +1,64 @@
-.chip {
-  border: none;
-  cursor: default;
+$chip: (
+  margin-bottom: spacing(0.5),
+  border: 1px solid,
+  border-radius: $radius-md,
+  height: 25px,
+  line-height: type(line-height, text, primary),
+  font-size: type(text),
+  label: (
+    padding-x: spacing(0.5)
+  ),
+  design: (
+    border-color: rgba(color(bermuda), 0.4),
+    background-color: rgba(color(downy), 0.05),
+    color: color(brand, design)
+  ),
+  development: (
+    border-color: rgba(color(brandy), 0.4),
+    background-color: rgba(color(celery), 0.05),
+    color: color(brand, development)
+  ),
+  marketing: (
+    border-color: rgba(color(hit-pink), 0.4),
+    background-color: rgba(color(hit-pink), 0.07),
+    color: color(brand, marketing)
+  )
+);
+
+.c-chip {
   display: inline-flex;
-  min-height: 25px;
-  outline: 0;
-  padding: 0;
   align-items: center;
-  white-space: nowrap;
-  border-radius: $radius-md;
-  vertical-align: middle;
   justify-content: center;
-  text-decoration: none;
-  margin-bottom: 5px;
+  margin-bottom: map-deep-get($chip, margin-bottom);
+  border: map-deep-get($chip, border);
+  border-radius: map-deep-get($chip, border-radius);
+  min-height: map-deep-get($chip, height);
+  line-height: map-deep-get($chip, line-height);
+  white-space: nowrap;
+  font-size: map-deep-get($chip, font-size);
 
   &__label {
-    cursor: inherit;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    white-space: nowrap;
-    padding-left: 5px;
-    padding-right: 5px;
     // fix due to font
-    margin-top: 3px;
+    @include font-adjust(3px, margin-top);
+    padding-right: map-deep-get($chip, label, padding-x);
+    padding-left: map-deep-get($chip, label, padding-x);
   }
+
   &--design {
-    border: 1px solid rgba(99, 208, 190, 0.4);
-    background-color: rgba(99, 208, 190, 0.05);
-    .#{chip}__label {
-      color: #4bbaa7;
-      font-size: 13px;
-      line-height: 16px;
-    }
+    border-color: map-deep-get($chip, design, border-color);
+    background-color: map-deep-get($chip, design, background-color);
+    color: map-deep-get($chip, design, color);
+  }
+
+  &--development {
+    border-color: map-deep-get($chip, development, border-color);
+    background-color: map-deep-get($chip, development, background-color);
+    color: map-deep-get($chip, development, color);
+  }
+
+  &--marketing {
+    border-color: map-deep-get($chip, marketing, border-color);
+    background-color: map-deep-get($chip, marketing, background-color);
+    color: map-deep-get($chip, marketing, color);
   }
 }
-
-// .chip {
-//   display: flex;
-//   align-items: center;
-//   min-height: 25px;
-//   margin-bottom: 10px;
-//   border: 1px solid;
-//   &__label {
-//     line-height: 16px;
-//     font-size: 13px;
-//   }
-// }

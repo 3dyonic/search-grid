@@ -1,18 +1,21 @@
+// LAYOUT: PAGE HEAD
 $page-head: (
   height: 67px,
-  border: 1px solid rgba(208, 208, 208, 0.61),
+  border: 1px solid rgba(color(alto), 0.61),
+  background-color: color(brand, secondary-bg),
+  padding-y: $spacing-container / 2,
   padding-x: $spacing-container
 );
 
 .page-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   border: map-get($page-head, border);
-  padding-right: map-get($page-head, padding-x);
-  padding-left: map-get($page-head, padding-x);
-  height: map-get($page-head, height);
+  background-color: map-deep-get($page-head, background-color);
+  padding: map-get($page-head, padding-y) map-get($page-head, padding-x);
+  min-height: map-get($page-head, height);
 
   &__results {
     display: flex;

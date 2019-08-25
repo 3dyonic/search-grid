@@ -1,12 +1,1 @@
-@mixin type-data {
-  color: #6d7278;
-  line-height: 19px;
-  font-size: 13px;
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-
-.type-data {
-  @include type-data;
-}
+// place holder for typography mixins...

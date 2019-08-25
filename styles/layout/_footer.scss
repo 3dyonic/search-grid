@@ -1,13 +1,14 @@
 $footer: (
   height: 85px,
-  background-color: #424856,
-  padding-x: $spacing-container
+  background-color: color(river-bed),
+  padding-x: $spacing-container,
+  padding-y: $spacing-container / 2
 );
 
 .footer {
   display: flex;
+  justify-content: space-between;
   background-color: map-get($footer, background-color);
-  padding-right: map-get($footer, padding-x);
-  padding-left: map-get($footer, padding-x);
-  height: map-get($footer, height);
+  padding: map-get($footer, padding-y) map-get($footer, padding-x);
+  min-height: map-get($footer, height);
 }

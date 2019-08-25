@@ -1,0 +1,34 @@
+// HELPERS: simple class based molecules
+
+// seperator: a simple seperator
+$seperator: (
+  margin-y: spacing(2),
+  background-color: color(brand, secondary-bg),
+  height: 2px
+);
+
+.o-seperator {
+  margin-top: map-deep-get($seperator, margin-y);
+  margin-bottom: map-deep-get($seperator, margin-y);
+  background-color: map-deep-get($seperator, background-color);
+  height: 2px;
+}
+
+// mobile display helper
+.mobile {
+  display: none;
+  @include media-max(md) {
+    display: block;
+  }
+}
+
+.o-link {
+  text-decoration: none;
+  &,
+  &:hover,
+  &:active {
+    color: color(brand, link);
+    text-transform: uppercase;
+    font-size: type(text);
+  }
+}

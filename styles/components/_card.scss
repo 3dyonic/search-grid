@@ -1,68 +1,61 @@
 $card: (
   border-radius: $radius-sm $radius-sm 0 0,
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
-  background: white,
-  padding: 20px,
-  image: (
-    width: calc(100% + 40px),
-    margin: -20px
-  ),
+  box-shadow: 0 2px 4px 0 rgba(color(brand, dark), 0.1),
+  background-color: color(brand, secondary-bg),
+  padding: spacing(2),
   avatar: (
-    margin-top: -20px,
-    margin-bottom: 10px
+    margin-bottom: spacing(1)
   ),
   title: (
-    margin-bottom: 10px,
-    line-height: 31px,
+    margin-bottom: spacing(1),
+    line-height: type(line-height, title),
     letter-spacing: -0.67px,
-    font-size: 24px,
-    color: #191d25
+    font-size: type(title),
+    color: color(brand, title)
   ),
   text: (
     text-align: center,
-    line-height: 19px,
-    color: #6d7278,
-    font-size: 13px
+    line-height: type(line-height, text, secondary),
+    font-size: type(text)
   ),
   labels: (
     width: 150px
   )
 );
 
-.card {
-  border-radius: $radius-sm $radius-sm 0 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  background: white;
-  padding: 20px;
+.c-card {
+  border-radius: map-deep-get($card, border-radius);
+  box-shadow: map-deep-get($card, box-shadow);
+  background-color: map-deep-get($card, background-color);
+  padding: map-deep-get($card, padding);
   overflow: hidden;
 
   &__image {
-    width: calc(100% + 40px);
-    margin: -20px;
+    margin: -#{map-deep-get($card, padding)};
+    width: calc(100% + #{2 * map-deep-get($card, padding)});
   }
 
   &__avatar {
-    margin: auto;
     position: relative;
-    z-index: 1;
-    margin-top: -20px;
-    margin-bottom: 10px;
+    z-index: z-map(base);
+    margin: auto;
+    margin-top: -#{map-deep-get($card, padding)};
+    margin-bottom: map-deep-get($card, avatar, margin-bottom);
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: map-deep-get($card, title, margin-bottom);
     text-align: center;
-    line-height: 31px;
-    letter-spacing: -0.67px;
-    font-size: 24px;
-    color: #191d25;
+    line-height: map-deep-get($card, title, line-height);
+    letter-spacing: map-deep-get($card, title, letter-spacing);
+    color: map-deep-get($card, title, color);
+    font-size: map-deep-get($card, title, font-size);
   }
 
   &__text {
     text-align: center;
-    line-height: 19px;
-    color: #6d7278;
-    font-size: 13px;
+    line-height: map-deep-get($card, text, line-height);
+    font-size: map-deep-get($card, text, font-size);
   }
 
   &__info {
@@ -71,12 +64,9 @@ $card: (
     justify-content: space-between;
   }
 
-  &__data {
-  }
-
   &__labels {
-    width: 150px;
-    text-align: right;
     margin-left: auto;
+    width: map-deep-get($card, labels, width);
+    text-align: right;
   }
 }

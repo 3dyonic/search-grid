@@ -1,37 +1,67 @@
-//24/31 (generic) --> 1.29
-//18/23 --> 1.27
-//16/21  --> 1.31
-//14/17 (generic) --> 1.21
-//13/19 (generic) -->  1.46
-//13/16 (generic) -->  1.23
+// - GLOBAL Fonts
+$rem-font-reset: 62.5%;
+$browser-defualt-font-size: 16px;
 
-// $type-16: 1.6rem;
-// $type-18: 1.8rem;
-// $type-20: 2rem;
-// $type-24: 2.4rem;
-// $type-28: 2.8rem;
-// $type-56: 5.6rem;
+$font-normal: 400;
+$font-bold: 700;
 
-// $type-reset: $type-16;
-// $type-headline: $type-28;
-// $type-headline-min-lg: $type-56;
-// $type-title: $type-24;
-// $type-subtitle: $type-20;
-// $type-subtitle-min-lg: $type-28;
-// $type-text: $type-18;
-// $type-body: $type-16;
+$font-aktivgrotest: "Aktivgrotest";
+$base-font: $font-aktivgrotest;
+$fallback-font: "sans-serif";
 
-// $type-line-height-headline: 1.1;
-// $type-line-height-flat: 1;
+//Font face variations
+$font-aktivgrotest-reg: "aktivgrotesk-regular";
+$font-aktivgrotest-bold: "aktivgrotesk-bold";
 
-// $type: (
-//   headline: $type-headline,
-//   title: $type-title,
-//   subtitle: $type-subtitle,
-//   text: $type-text,
-//   body: $type-body,
-//   min-lg: (
-//     headline: $type-headline-min-lg,
-//     subtitle: $type-subtitle-min-lg
-//   )
-// );
+// REGISTER font size  and line-height values
+$font-base: 1.6rem;
+$font-13: 0.8125 * $font-base;
+$font-14: 0.875 * $font-base;
+$font-18: 1.125 * $font-base;
+$font-24: 1.5 * $font-base;
+
+$line-height-31: 1.9375 * $font-base;
+$line-height-23: 1.4375 * $font-base;
+$line-height-21: 1.3125 * $font-base;
+$line-height-19: 1.1875 * $font-base;
+$line-height-17: 1.0625 * $font-base;
+$line-height-16: $font-base;
+
+$type-body: $font-base;
+$type-title: $font-24;
+$type-title-line-height: $line-height-31;
+$type-text: $font-13;
+$type-control: $font-14;
+$type-control-line-height: $line-height-17;
+$type-text-line-height-primary: $line-height-16;
+$type-text-line-height-secondary: $line-height-19;
+
+$type: (
+  base: $font-base,
+  13: $font-13,
+  14: $font-14,
+  18: $font-18,
+  24: $font-24,
+  l-h-31: $line-height-31,
+  l-h-23: $line-height-23,
+  l-h-21: $line-height-21,
+  l-h-19: $line-height-19,
+  l-h-17: $line-height-17,
+  l-h-16: $line-height-16,
+  title: $type-title,
+  text: $type-text,
+  body: $type-body,
+  control: $type-control,
+  line-height: (
+    title: $type-title-line-height,
+    text: (
+      primary: $type-text-line-height-primary,
+      secondary: $type-text-line-height-secondary
+    ),
+    control: $type-control-line-height
+  ),
+  weight: (
+    bold: $font-bold,
+    normal: $font-normal
+  )
+);

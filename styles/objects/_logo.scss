@@ -1,0 +1,14 @@
+$logo: (
+  font-size: 3.2rem,
+  lg: (
+    font-size: 4rem
+  )
+);
+
+.o-logo {
+  font-size: map-deep-get($logo, font-size);
+
+  &-lg {
+    font-size: map-deep-get($logo, lg, font-size);
+  }
+}

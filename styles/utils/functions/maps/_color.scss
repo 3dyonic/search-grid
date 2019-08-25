@@ -1,5 +1,5 @@
 // Context Deep maps with predefined maps for Brand Colors
-@function brand($keys...) {
+@function color($keys...) {
   $map: $color;
   @if $map {
     @return map-deep-get($map, $keys...);

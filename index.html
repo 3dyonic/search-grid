@@ -12,60 +12,180 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="header__logo"></div>
+            <a class="o-logo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#fff"
+                        d="M462.1 27.001H49.9c-12.676 0-22.898 10.223-22.898 22.899v412.2c0 12.677 10.223 22.899 22.898 22.899h412.2c12.677 0 22.898-10.223 22.898-22.899V49.9c0-12.676-10.222-22.899-22.898-22.899" />
+                    <path fill="#fff"
+                        d="M462.1 494.999H49.9c-18.14 0-32.898-14.759-32.898-32.899V49.9c0-18.141 14.758-32.899 32.898-32.899h412.2c18.141 0 32.898 14.759 32.898 32.899v412.2c0 18.14-14.758 32.899-32.898 32.899zM49.9 37.001c-7.112 0-12.898 5.787-12.898 12.899v412.2c0 7.112 5.786 12.899 12.898 12.899h412.2c7.112 0 12.898-5.787 12.898-12.899V49.9c0-7.113-5.786-12.899-12.898-12.899H49.9z" />
+                    <path fill="#424856"
+                        d="M238.553 151.314h119.27v43.552h-119.27zM238.553 227.647h119.27v43.551h-119.27zM238.553 303.981h119.27v43.551h-119.27zM162.219 151.314h43.619V347.6h-43.619z" />
+                </svg>
+            </a>
             <div class="header__actions">
-                <button class="o-btn o-btn--ghost">login</button>
+                <button class="o-btn o-btn--ghost">
+                    <div class="o-btn__label">login</div>
+                </button>
             </div>
         </header>
         <section class="page-head">
             <div class="page-head__results">
-                <div class="results">
-                    <h1 class="results__title">Filter results <span class="results__num">(15)</span></h1>
+                <div class="c-results">
+                    <h1 class="c-results__title">Filter results <span class="c-results__num">(15)</span></h1>
                 </div>
-                <button class="btn btn-clear">Clear all</button>
+                <button class="c-results__clear">Clear all</button>
             </div>
             <div class="page-head__search">
-                <div class="search">
-                    <input type="text" class="search_control" placeholder="What are you looking for?">
-                    <button type="submit" class="search__button btn-clear">
-                        <i class="fa fa-search"></i>
+                <div class="c-search">
+                    <input type="text" class="c-search__control" placeholder="What are you looking for?">
+                    <button type="submit" class="c-search__button btn-clear">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </section>
         <section class="page">
+            <button class="page__filter mobile">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z" />
+                </svg>
+            </button>
             <div class="page__aside">
-                <div class="panel">
-                    <div class="panel__head">
-                        <div>title</div>
-                        <div>close</div>
+                <div class="c-panel">
+                    <div class="c-panel__head">
+                        <div>service type</div>
+                        <button class="c-panel__head-btn"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="panel__body">
+                    <div class="c-panel__body">
                         <label class="o-checkbox">
                             <input type="checkbox" checked="checked">
                             <span class="o-checkbox__checkmark"></span>
-                            <div class="o-checkbox__label">one</div>
+                            <div class="o-checkbox__label">designer</div>
                         </label>
-                        <!--radio-->
-                        <label class="o-radio">One
-                            <input type="radio" checked="checked" name="radio">
-                            <span class="o-radio__checkmark"></span>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark" checked="checked"></span>
+                            <div class="o-checkbox__label">developer</div>
                         </label>
-                        <label class="o-radio">One
-                            <input type="radio" checked="checked" name="radio">
-                            <span class="o-radio__checkmark"></span>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">marketer</div>
+                        </label>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">educator</div>
                         </label>
                     </div>
-                    <div class="panel__expand">+ expand</div>
+                </div>
+                <div class="c-panel">
+                    <div class="c-panel__head">
+                        <div>skills</div>
+                        <div>
+                            <button class="c-panel__clear">clear</button>
+                            <button class="c-panel__toggle"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="c-panel__body">
+                        <label class="o-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">web design</div>
+                        </label>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">mobile-responsive</div>
+                        </label>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">graphic design</div>
+                        </label>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">illustrations</div>
+                        </label>
+                        <label class="o-checkbox">
+                            <input type="checkbox">
+                            <span class="o-checkbox__checkmark"></span>
+                            <div class="o-checkbox__label">web development</div>
+                        </label>
+                    </div>
+                    <button class="c-panel__show-more">
+                        <svg class="c-panel__show-more-icon icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>show more
+                    </button>
+                </div>
+                <div class="c-panel">
+                    <div class="c-panel__head">
+                        <div>budget</div>
+                        <div>
+                            <button class="c-panel__toggle"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="c-panel__body">
+                        <label class="o-radio">
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                            <div class="o-radio__label">under $3000</div>
+                        </label>
+                        <label class="o-radio">
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                            <div class="o-radio__label">$3000 - 10,000</div>
+                        </label>
+                        <label class="o-radio">
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                            <div class="o-radio__label">$10,000 - 25,000</div>
+                        </label>
+                        <label class="o-radio">
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="o-radio__checkmark"></span>
+                            <div class="o-radio__label">over $25,000</div>
+                        </label>
+                    </div>
+                    <button class="c-panel__show-more">
+                        <svg class="c-panel__show-more-icon icon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>show more
+                    </button>
                 </div>
             </div>
             <div class="page__main">
-                <div class="card">
-                    <img class="card__image" srcset="assets/images/designers/cover-small-01.png, 
+                <div class="c-card">
+                    <img class="c-card__image" srcset="assets/images/designers/cover-small-01.png, 
                     assets/images/designers/cover-small-01@2x.png 2x" src="assets/images/designers/cover-small-01.png"
                         alt="Marguerite Anderson cover work" />
-                    <div class="card__avatar avatar">
-                        <svg class="avatar__chart donut-chart" viewBox="0 0 95 95" class="donut" style="
+                    <div class="c-card__avatar c-avatar">
+                        <svg class="c-avatar__chart c-donut-chart" viewBox="0 0 95 95" class="donut" style="
                             --size-development:25; 
                             --size-marketing:48;
                             --size-design:288;
@@ -86,31 +206,256 @@
                                 stroke-dashoffset="var(--offset-design)" transform="">
                             </circle>
                         </svg>
-                        <img class="avatar__image" srcset="assets/images/designers/avatar-small-01.png,
-                        assets/images/designers/avatar-small-01@2x.png 2x"
-                            src="assets/images/designers/avatar-small-01.png" alt="Marguerite Anderson profile image" />
+                        <img class="c-avatar__image" srcset="assets/images/designers/avatar-big.png,
+                        assets/images/designers/avatar-big@2x.png 2x" src="assets/images/designers/avatar-big.png"
+                            alt="Marguerite Anderson profile image" />
                     </div>
-                    <div class="card__body">
-                        <h2 class="card__title">Marguerite Anderson</h2>
-                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                    <div class="c-card__body">
+                        <h2 class="c-card__title">Marguerite Anderson</h2>
+                        <p class="c-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
                             tortor
                             nibh, sit amet tempor nibh finibus et. Aenean eu enim</p>
                     </div>
-                    <hr class="seperator" />
-                    <div class="card__info">
-                        <div class="card__data">
-                            <div class="type-data">Jerusalem - GMT+2</div>
-                            <div class="type-data">English, Spanish, Hebrew</div>
+                    <hr class="o-seperator" />
+                    <div class="c-card__info">
+                        <div class="c-card__data">
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class=" icon" viewBox=" 0 0
+                                    512 512">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+                                    </svg>
+                                </i>
+                                Jerusalem - GMT+2</div>
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 640 512">
+                                        <path
+                                            d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z" />
+                                    </svg>
+                                </i>
+                                English, Spanish, Hebrew</div>
                         </div>
-                        <div class="card__labels">
-                            <div class="chip chip--design">
-                                <div class="chip__label">web design</div>
+                        <div class="c-card__labels">
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">web design</div>
                             </div>
-                            <div class="chip chip--design">
-                                <div class="chip__label">mobile-responsive</div>
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">mobile-responsive</div>
                             </div>
-                            <div class="chip chip--design">
-                                <div class="chip__label">graphic design</div>
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">graphic design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card">
+                    <img class="c-card__image" srcset="assets/images/designers/cover-small-02.png, 
+                        assets/images/designers/cover-small-01@2x.png 2x"
+                        src="assets/images/designers/cover-small-02.png" alt="Marguerite Anderson cover work" />
+                    <div class="c-card__avatar c-avatar">
+                        <svg class="c-avatar__chart c-donut-chart" viewBox="0 0 95 95" class="donut" style="
+                                --size-development:25; 
+                                --size-marketing:48;
+                                --size-design:288;
+                                --offset-marketing:-25;
+                                --offset-design:-72;
+                                ">
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-development)" stroke-width="7"
+                                stroke-dasharray="var(--size-development) 1000" stroke-dashoffset="0" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-marketing)" stroke-width="7"
+                                stroke-dasharray="var(--size-marketing) 1000"
+                                stroke-dashoffset="var(--offset-marketing)" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-design)" stroke-width="7" stroke-dasharray="var(--size-design) 1000"
+                                stroke-dashoffset="var(--offset-design)" transform="">
+                            </circle>
+                        </svg>
+                        <img class="c-avatar__image" srcset="assets/images/designers/avatar-small-02.png,
+                            assets/images/designers/avatar-small-02@2x.png 2x"
+                            src="assets/images/designers/avatar-small-02.png" alt="Marguerite Anderson profile image" />
+                    </div>
+                    <div class="c-card__body">
+                        <h2 class="c-card__title">Martijn Dragonjer</h2>
+                        <p class="c-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim</p>
+                    </div>
+                    <hr class="o-seperator" />
+                    <div class="c-card__info">
+                        <div class="c-card__data">
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class=" icon" viewBox=" 0 0
+                                        512 512">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+                                    </svg>
+                                </i>
+                                Jerusalem - GMT+2</div>
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 640 512">
+                                        <path
+                                            d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z" />
+                                    </svg>
+                                </i>
+                                English, Spanish, Hebrew</div>
+                        </div>
+                        <div class="c-card__labels">
+                            <div class="c-chip c-chip--development">
+                                <div class="c-chip__label">web components</div>
+                            </div>
+                            <div class="c-chip c-chip--development">
+                                <div class="c-chip__label">mobile-responsive</div>
+                            </div>
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">graphic design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card">
+                    <img class="c-card__image" srcset="assets/images/designers/cover-small-03.png, 
+                            assets/images/designers/cover-small-03@2x.png 2x"
+                        src="assets/images/designers/cover-small-03.png" alt="Marguerite Anderson cover work" />
+                    <div class="c-card__avatar c-avatar">
+                        <svg class="c-avatar__chart c-donut-chart" viewBox="0 0 95 95" class="donut" style="
+                                    --size-development:25; 
+                                    --size-marketing:48;
+                                    --size-design:288;
+                                    --offset-marketing:-25;
+                                    --offset-design:-72;
+                                    ">
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-development)" stroke-width="7"
+                                stroke-dasharray="var(--size-development) 1000" stroke-dashoffset="0" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-marketing)" stroke-width="7"
+                                stroke-dasharray="var(--size-marketing) 1000"
+                                stroke-dashoffset="var(--offset-marketing)" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-design)" stroke-width="7" stroke-dasharray="var(--size-design) 1000"
+                                stroke-dashoffset="var(--offset-design)" transform="">
+                            </circle>
+                        </svg>
+                        <img class="c-avatar__image" srcset="assets/images/designers/avatar-small-03.png,
+                                assets/images/designers/avatar-small-03@2x.png 2x"
+                            src="assets/images/designers/avatar-small-03.png" alt="Marguerite Anderson profile image" />
+                    </div>
+                    <div class="c-card__body">
+                        <h2 class="c-card__title">Gerald Swanson</h2>
+                        <p class="c-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim</p>
+                    </div>
+                    <hr class="o-seperator" />
+                    <div class="c-card__info">
+                        <div class="c-card__data">
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class=" icon" viewBox=" 0 0
+                                            512 512">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+                                    </svg>
+                                </i>
+                                Jerusalem - GMT+2</div>
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 640 512">
+                                        <path
+                                            d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z" />
+                                    </svg>
+                                </i>
+                                English, Spanish, Hebrew</div>
+                        </div>
+                        <div class="c-card__labels">
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">web design</div>
+                            </div>
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">mobile-responsive</div>
+                            </div>
+                            <div class="c-chip c-chip--design">
+                                <div class="c-chip__label">graphic design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card">
+                    <img class="c-card__image" srcset="assets/images/designers/cover-small-05.png, 
+                                            assets/images/designers/cover-small-05@2x.png 2x"
+                        src="assets/images/designers/cover-small-05.png" alt="Marguerite Anderson cover work" />
+                    <div class="c-card__avatar c-avatar">
+                        <svg class="c-avatar__chart c-donut-chart" viewBox="0 0 95 95" class="donut" style="
+                                                    --size-development:25; 
+                                                    --size-marketing:48;
+                                                    --size-design:288;
+                                                    --offset-marketing:-25;
+                                                    --offset-design:-72;
+                                                    ">
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-development)" stroke-width="7"
+                                stroke-dasharray="var(--size-development) 1000" stroke-dashoffset="0" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-marketing)" stroke-width="7"
+                                stroke-dasharray="var(--size-marketing) 1000"
+                                stroke-dashoffset="var(--offset-marketing)" transform="">
+                            </circle>
+                            <circle class="donut-segment" cx="47.5" cy="47.5" r="44.5" fill="transparent"
+                                stroke="var(--color-design)" stroke-width="7" stroke-dasharray="var(--size-design) 1000"
+                                stroke-dashoffset="var(--offset-design)" transform="">
+                            </circle>
+                        </svg>
+                        <img class="c-avatar__image" srcset="assets/images/designers/avatar-small-05.png,
+                                                assets/images/designers/avatar-small-05@2x.png 2x"
+                            src="assets/images/designers/avatar-small-05.png" alt="Marguerite Anderson profile image" />
+                    </div>
+                    <div class="c-card__body">
+                        <h2 class="c-card__title">Henry Bowers</h2>
+                        <p class="c-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius
+                            tortor
+                            nibh, sit amet tempor nibh finibus et. Aenean eu enim</p>
+                    </div>
+                    <hr class="o-seperator" />
+                    <div class="c-card__info">
+                        <div class="c-card__data">
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class=" icon" viewBox=" 0 0
+                                                            512 512">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+                                    </svg>
+                                </i>
+                                Jerusalem - GMT+2</div>
+                            <div class="c-type-data">
+                                <i class="c-type-data__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 640 512">
+                                        <path
+                                            d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z" />
+                                    </svg>
+                                </i>
+                                English, Spanish, Hebrew</div>
+                        </div>
+                        <div class="c-card__labels">
+                            <div class="c-chip c-chip--marketing">
+                                <div class="c-chip__label">marketing</div>
+                            </div>
+                            <div class="c-chip c-chip--marketing">
+                                <div class="c-chip__label">inbound marketing</div>
+                            </div>
+                            <div class="c-chip c-chip--development">
+                                <div class="c-chip__label">React</div>
                             </div>
                         </div>
                     </div>
@@ -118,15 +463,31 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__logo"></div>
-            <ul class="links">
-                <li class="links__item link"></li>
-                <li class="links__item link"></li>
-                <li class="links__item link"></li>
-                <li class="links__item link"></li>
+            <a class="o-logo-lg">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#fff"
+                        d="M462.1 27.001H49.9c-12.676 0-22.898 10.223-22.898 22.899v412.2c0 12.677 10.223 22.899 22.898 22.899h412.2c12.677 0 22.898-10.223 22.898-22.899V49.9c0-12.676-10.222-22.899-22.898-22.899" />
+                    <path fill="#fff"
+                        d="M462.1 494.999H49.9c-18.14 0-32.898-14.759-32.898-32.899V49.9c0-18.141 14.758-32.899 32.898-32.899h412.2c18.141 0 32.898 14.759 32.898 32.899v412.2c0 18.14-14.758 32.899-32.898 32.899zM49.9 37.001c-7.112 0-12.898 5.787-12.898 12.899v412.2c0 7.112 5.786 12.899 12.898 12.899h412.2c7.112 0 12.898-5.787 12.898-12.899V49.9c0-7.113-5.786-12.899-12.898-12.899H49.9z" />
+                    <path fill="#424856"
+                        d="M238.553 151.314h119.27v43.552h-119.27zM238.553 227.647h119.27v43.551h-119.27zM238.553 303.981h119.27v43.551h-119.27zM162.219 151.314h43.619V347.6h-43.619z" />
+                </svg>
+            </a>
+            <ul class="c-links">
+                <li class="c-links__item">
+                    <a class="o-link" href="">faq</a>
+                </li>
+                <li class="c-links__item">
+                    <a class="o-link" href="">privacy policy</a>
+                </li>
+                <li class="c-links__item">
+                    <a class="o-link" href="">terms of use</a>
+                </li>
+                <li class="c-links__item">
+                    <a class="o-link" href="">contact us</a>
+                </li>
             </ul>
             <div class="footer__overline">
-                <div class="mdl-reindex"></div>
             </div>
         </footer>
     </div>

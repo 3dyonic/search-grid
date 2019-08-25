@@ -1,6 +1,6 @@
 // Configuration imports
-@import "config/assets";
 @import "config/color";
 @import "config/type";
+@import "config/z-index";
 // global is last because it might use all other configs as dependency
 @import "config/global";

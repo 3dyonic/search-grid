@@ -1,46 +1,95 @@
-$color-1: #242a36;
-$color-2: #3c424f;
+//REGISTER unique names with http://chir.ag/projects/name-that-color
+//sass-lint:disable no-color-hex
 $color-white: #fff;
-$color-3: #eff2f3;
-$color-4: #191d25;
-$color-5: #565960;
-$color-6: #1294ca;
-$color-7: #9da3b0;
-$color-8: #f8f8f8;
-$color-9: #ced3d7;
-$color-10:#6D7278
+$color-black: #000;
+$color-porcelain: #eff2f3;
+$color-alabaster: #f8f8f8;
+$color-bombay: #b2b7c0;
+$color-iron: #ced3d7;
+$color-alto: #d0d0d0;
+$color-gray-chateau: #9da3b0;
+$color-oslo-gray: #83858a;
+$color-nevada: #6d7278;
+$color-abbey: #565960;
+$color-bright-gray: #3c424f;
+$color-ebony-clay: #242a36;
+$color-river-bed: #424856;
+$color-mirage: #191d25;
+$color-celery: #bed063;
+$color-brandy: #ddd08d;
+$color-hit-pink: #ffac7d;
+$color-burnt-sienna: #e78c58;
+$color-eastern-blue: #1294ca;
+$color-bermuda: #8dddd0;
+$color-downy: #63d0be;
+$color-puerto-rico: #4bbaa7;
+$color-brink-pink: #f85b85;
+$color-dodger-blue: #27c0ff;
+$color-aluminium: #aaafb9;
+//sass-lint:enable no-color-hex
 
+// BRAND SEMANTICS
+// TBD: missing: success,error,info, alert,mute and so on...
+$color-brand-light: $color-white;
+$color-brand-dark: $color-black;
+$color-brand-body: $color-nevada;
+$color-brand-label: $color-abbey;
+$color-brand-title: $color-mirage;
+$color-brand-system: $color-nevada;
+$color-brand-system-alt: $color-gray-chateau;
+$color-brand-design: $color-puerto-rico;
+$color-brand-development: $color-brink-pink;
+$color-brand-marketing: $color-burnt-sienna;
+$color-brand-primary-background: $color-porcelain;
+$color-brand-secondary-background: $color-brand-light;
+$color-selected: $color-eastern-blue;
+$color-action: $color-eastern-blue;
+$color-link: $color-bombay;
+$color-border: $color-alto;
 
-
-
-// $color-brand-primary: $color-stk-curious-blue;
-// $color-brand-secondary: rgba($color-brand-primary, 0.2);
-// $color-brand-highlight: $color-stk-polar;
-// $color-brand-alt: $color-stk-tory-blue;
-// $color-brand-type: $color-stk-emperor;
-// $color-brand-body: $color-stk-emperor;
-// $color-brand-error: $color-stk-torch-red;
-// $color-brand-system: $color-stk-mercury;
-// $color-brand-system-alt: $color-stk-alto;
-// $color-brand-control: $color-stk-silver;
-// $color-brand-light: $color-stk-white;
-// $color-brand-dark: $color-stk-black;
-// $color-brand-border-1: $color-stk-aluminium;
-
-// $color: (
-//   primary: $color-brand-primary,
-//   secondary: $color-brand-secondary,
-//   highlight: $color-brand-highlight,
-//   alt: $color-brand-alt,
-//   type: $color-brand-type,
-//   system: $color-brand-system,
-//   system-alt: $color-brand-system-alt,
-//   control: $color-brand-control,
-//   error: $color-brand-error,
-//   mute: $color-brand-alt,
-//   active: $color-brand-primary,
-//   disabled: $color-brand-alt,
-//   light: $color-brand-light,
-//   dark: $color-brand-dark,
-//   border-1: $color-brand-border-1
-// );
+$color: (
+  white: $color-white,
+  abbey: $color-abbey,
+  alabaster: $color-alabaster,
+  aluminium: $color-aluminium,
+  alto: $color-alto,
+  bombay: $color-bombay,
+  bermuda: $color-bermuda,
+  burnt-sienna: $color-burnt-sienna,
+  brandy: $color-brandy,
+  brink-pink: $color-brink-pink,
+  bright-gray: $color-bright-gray,
+  celery: $color-celery,
+  dodger-blue: $color-dodger-blue,
+  downy: $color-downy,
+  ebony-clay: $color-ebony-clay,
+  eastern-blue: $color-eastern-blue,
+  hit-pink: $color-hit-pink,
+  iron: $color-iron,
+  gray-bright: $color-bright-gray,
+  gray-chateau: $color-gray-chateau,
+  gray-oslo: $color-oslo-gray,
+  mirage: $color-mirage,
+  nevada: $color-nevada,
+  porcelain: $color-porcelain,
+  puerto-rico: $color-puerto-rico,
+  river-bed: $color-river-bed,
+  brand: (
+    light: $color-brand-light,
+    dark: $color-brand-dark,
+    body: $color-brand-body,
+    label: $color-brand-label,
+    title: $color-brand-title,
+    system: $color-brand-system,
+    system-alt: $color-brand-system-alt,
+    design: $color-brand-design,
+    development: $color-brand-development,
+    marketing: $color-brand-marketing,
+    primary-bg: $color-brand-primary-background,
+    secondary-bg: $color-brand-secondary-background,
+    selected: $color-selected,
+    action: $color-action,
+    link: $color-link,
+    border: $color-border
+  )
+);

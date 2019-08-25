@@ -5,12 +5,28 @@
     box-sizing: border-box; }
 
 button {
-  box-shadow: none;
-  background-color: transparent;
+  outline: none;
   border: 0;
-  outline: none; }
+  box-shadow: none;
+  background-color: transparent; }
   button:not([disabled]) {
     cursor: pointer; }
+
+input,
+button {
+  color: inherit;
+  font-family: inherit; }
+
+input {
+  border: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit; }
 
 @font-face {
   font-family: "Aktivgrotest";
@@ -26,132 +42,153 @@ button {
 
 html {
   width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 62.5%; }
 
 body {
-  font-family: "Aktivgrotest", "sans-serif"; }
-
-input,
-button {
-  font-family: inherit; }
-
-.type-data {
   color: #6d7278;
-  line-height: 19px;
-  font-size: 13px; }
-  .type-data:not(:last-child) {
-    margin-bottom: 15px; }
+  font-family: "Aktivgrotest", "sans-serif";
+  font-size: 16px; }
 
-.seperator {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #f0f2f3;
-  height: 2px; }
+hr {
+  border: 0; }
+
+ul {
+  list-style: none; }
+
+::placeholder {
+  color: #6d7278;
+  opacity: 1; }
 
 .o-btn {
+  min-width: 160px;
   height: 40px;
-  width: 157px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.7rem;
+  font-size: 1.4rem; }
+  .o-btn .o-btn__label {
+    position: relative;
+    top: 3px; }
   .o-btn--ghost {
-    border: 1.5px solid currentColor;
-    border-radius: 32.5px;
+    border: 2px solid currentColor;
+    border-radius: 30px;
     background-color: transparent;
     color: #27c0ff; }
 
 .o-checkbox {
   display: flex;
-  align-items: center;
   position: relative;
-  margin-bottom: 12px;
+  align-items: center;
   cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* When the checkbox is checked, add a blue background */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */ }
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  user-select: none; }
   .o-checkbox:not(:last-child) {
     margin-bottom: 15px; }
   .o-checkbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0; }
+    width: 0;
+    height: 0; }
+    .o-checkbox input:checked ~ .o-checkbox__checkmark::after {
+      content: ""; }
+    .o-checkbox input:checked ~ .o-checkbox__label {
+      color: #1294ca; }
   .o-checkbox__checkmark {
     position: relative;
-    height: 16px;
-    width: 16px;
-    background-color: #eee;
+    margin-right: 15px;
     border: 1px solid #aaafb9;
     border-radius: 2px;
-    margin-right: 15px; }
-  .o-checkbox__checkmark::after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0; }
-  .o-checkbox input:checked ~ .o-checkbox__checkmark::after {
-    display: block; }
-  .o-checkbox__checkmark::after {
-    left: 4px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid #1294ca;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
+    background-color: #fff;
+    width: 16px;
+    height: 16px; }
+    .o-checkbox__checkmark::after {
+      transform: rotate(45deg);
+      border: solid currentColor;
+      border-width: 0 1px 1px 0;
+      width: 5px;
+      height: 8px;
+      color: #1294ca;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto; }
+  .o-checkbox__label {
+    text-transform: capitalize; }
+
+.icon {
+  display: inline-block;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor; }
+
+.o-logo {
+  font-size: 3.2rem; }
+  .o-logo-lg {
+    font-size: 4rem; }
 
 .o-radio {
-  display: block;
+  display: flex;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  align-items: center;
+  margin-bottom: 15px;
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Hide the browser's default radio button */
-  /* Create a custom radio button */
-  /* When the radio button is checked, add a blue background */
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  /* Show the indicator (dot/circle) when checked */
-  /* Style the indicator (dot/circle) */ }
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  user-select: none; }
   .o-radio input {
     position: absolute;
     opacity: 0;
     cursor: pointer; }
+    .o-radio input:checked ~ .o-radio__checkmark::after {
+      content: ""; }
+    .o-radio input:checked ~ .o-radio__label {
+      color: #1294ca; }
   .o-radio__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%; }
-  .o-radio input:checked ~ .o-radio__checkmark {
-    background-color: #2196f3; }
-  .o-radio__checkmark:after {
-    content: "";
-    position: absolute;
-    display: none; }
-  .o-radio input:checked ~ .o-radio__checkmark:after {
-    display: block; }
-  .o-radio__checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
+    position: relative;
+    margin-right: 15px;
+    border: 2px solid #aaafb9;
     border-radius: 50%;
-    background: white; }
+    background-color: #fff;
+    width: 18px;
+    height: 18px; }
+    .o-radio__checkmark::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border-radius: 50%;
+      background-color: #1294ca;
+      width: 10px;
+      height: 10px; }
+  .o-radio__label {
+    text-transform: capitalize; }
+
+.o-seperator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  height: 2px; }
+
+.mobile {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .mobile {
+      display: block; } }
+
+.o-link {
+  text-decoration: none; }
+  .o-link, .o-link:hover, .o-link:active {
+    color: #b2b7c0;
+    text-transform: uppercase;
+    font-size: 1.3rem; }
 
 .app {
   display: flex;
@@ -160,192 +197,245 @@ button {
 
 .footer {
   display: flex;
+  justify-content: space-between;
   background-color: #424856;
-  padding-right: 40px;
-  padding-left: 40px;
-  height: 85px; }
+  padding: 20px 40px;
+  min-height: 85px; }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #242a36 0%, #3c424f 100%);
-  padding-right: 40px;
-  padding-left: 40px;
-  height: 85px; }
+  padding: 20px 40px;
+  min-height: 85px; }
 
 .page-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   border: 1px solid rgba(208, 208, 208, 0.61);
-  padding-right: 40px;
-  padding-left: 40px;
-  height: 67px; }
+  background-color: #fff;
+  padding: 20px 40px;
+  min-height: 67px; }
   .page-head__results {
     display: flex;
     align-items: center; }
 
 .page {
   display: flex;
-  flex-grow: 1;
-  position: relative; }
+  position: relative;
+  flex-grow: 1; }
+  .page__filter {
+    border: 1px solid #9da3b0;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 40px; }
+    .page__filter:focus ~ .page__aside {
+      display: block; }
   .page__aside {
     border-right: 1px solid rgba(208, 208, 208, 0.61);
-    background-color: white; }
+    background-color: #fff;
+    overflow-y: auto; }
+    @media only screen and (max-width: 767px) {
+      .page__aside {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 10vw;
+        bottom: 0;
+        left: 0;
+        z-index: 500; } }
     @media only screen and (min-width: 768px) {
       .page__aside {
         min-width: 364px; } }
-    @media only screen and (max-width: 767px) {
-      .page__aside {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 10vw;
-        z-index: 100; } }
   .page__main {
     display: grid;
+    flex-grow: 1;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(min-content, max-content);
     grid-gap: 20px;
-    padding: 40px;
-    flex-grow: 1;
-    background: #eff2f3; }
-    @media only screen and (min-width: 768px) {
-      .page__main {
-        grid-template-columns: 1fr; } }
+    background-color: #eff2f3;
+    padding: 40px 40px 240px 40px; }
     @media only screen and (min-width: 1025px) {
       .page__main {
         grid-template-columns: 1fr 1fr; } }
     @media only screen and (min-width: 1440px) {
       .page__main {
-        grid-template-columns: repeat(3, minmax(350px, 1fr)); } }
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); } }
 
-.avatar {
+.c-avatar {
+  position: relative;
+  border-radius: 50%;
   width: 95px;
   height: 95px;
-  border-radius: 50%;
-  position: relative;
   text-align: center; }
-  .avatar__image {
+  .c-avatar__image {
+    border: 10px solid #fff;
     border-radius: 50%;
-    overflow: hidden;
     width: 100%;
-    border: 10px solid white; }
-  .avatar__chart {
+    overflow: hidden; }
+  .c-avatar__chart {
     position: absolute;
-    overflow: hidden;
-    left: 0;
     top: 0;
-    z-index: 1; }
+    left: 0;
+    z-index: 1;
+    overflow: hidden; }
 
-.card {
+.c-card {
   border-radius: 3px 3px 0 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  background: white;
+  background-color: #fff;
   padding: 20px;
   overflow: hidden; }
-  .card__image {
-    width: calc(100% + 40px);
-    margin: -20px; }
-  .card__avatar {
-    margin: auto;
+  .c-card__image {
+    margin: -20px;
+    width: calc(100% + 40px); }
+  .c-card__avatar {
     position: relative;
     z-index: 1;
+    margin: auto;
     margin-top: -20px;
     margin-bottom: 10px; }
-  .card__title {
+  .c-card__title {
     margin-bottom: 10px;
     text-align: center;
-    line-height: 31px;
+    line-height: 3.1rem;
     letter-spacing: -0.67px;
-    font-size: 24px;
-    color: #191d25; }
-  .card__text {
+    color: #191d25;
+    font-size: 2.4rem; }
+  .c-card__text {
     text-align: center;
-    line-height: 19px;
-    color: #6d7278;
-    font-size: 13px; }
-  .card__info {
+    line-height: 1.9rem;
+    font-size: 1.3rem; }
+  .c-card__info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-  .card__labels {
+  .c-card__labels {
+    margin-left: auto;
     width: 150px;
-    text-align: right;
-    margin-left: auto; }
+    text-align: right; }
 
-.chip {
-  border: none;
-  cursor: default;
+.c-chip {
   display: inline-flex;
-  min-height: 25px;
-  outline: 0;
-  padding: 0;
   align-items: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  vertical-align: middle;
   justify-content: center;
-  text-decoration: none;
-  margin-bottom: 5px; }
-  .chip__label {
-    cursor: inherit;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    white-space: nowrap;
-    padding-left: 5px;
+  margin-bottom: 5px;
+  border: 1px solid;
+  border-radius: 4px;
+  min-height: 25px;
+  line-height: 1.6rem;
+  white-space: nowrap;
+  font-size: 1.3rem; }
+  .c-chip__label {
+    margin-top: 3px;
     padding-right: 5px;
-    margin-top: 3px; }
-  .chip--design {
-    border: 1px solid rgba(99, 208, 190, 0.4);
-    background-color: rgba(99, 208, 190, 0.05); }
-    .chip--design .chip__label {
-      color: #4bbaa7;
-      font-size: 13px;
-      line-height: 16px; }
+    padding-left: 5px; }
+  .c-chip--design {
+    border-color: rgba(141, 221, 208, 0.4);
+    background-color: rgba(99, 208, 190, 0.05);
+    color: #4bbaa7; }
+  .c-chip--development {
+    border-color: rgba(221, 208, 141, 0.4);
+    background-color: rgba(190, 208, 99, 0.05);
+    color: #f85b85; }
+  .c-chip--marketing {
+    border-color: rgba(255, 172, 125, 0.4);
+    background-color: rgba(255, 172, 125, 0.07);
+    color: #e78c58; }
 
-.donut-chart {
+.c-type-data {
+  line-height: 1.9rem;
+  font-size: 1.3rem; }
+  .c-type-data:not(:last-child) {
+    margin-bottom: 15px; }
+  .c-type-data__icon {
+    margin-right: 5px;
+    font-size: 2rem; }
+
+.c-donut-chart {
   --color-design: #4bbaa7;
   --color-development: #f85b85;
   --color-marketing: #e78c58;
   transform: rotate(-90deg); }
 
-.panel {
-  padding: 40px;
-  border-bottom: 1px solid #eff2f3; }
-  .panel__head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; }
-  .panel__body:not(:last-of-type) {
-    margin-bottom: 20px; }
+.c-links {
+  display: flex;
+  align-items: center; }
+  .c-links__item {
+    min-height: 16px; }
+    .c-links__item:not(:first-child) {
+      padding-left: 15px; }
+    .c-links__item:not(:last-child) {
+      border-right: 1px solid #5d6670;
+      padding-right: 15px; }
 
-.search {
-  width: 100%;
+.c-panel {
+  border-bottom: 1px solid #eff2f3;
+  padding: 20px 40px 30px; }
+  .c-panel__head {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+    font-size: 1.4rem;
+    font-weight: 700; }
+  .c-panel__clear {
+    margin-right: 5px;
+    text-transform: capitalize;
+    line-height: 1.7rem;
+    font-size: 1.4rem; }
+  .c-panel__toggle {
+    font-size: 12px; }
+  .c-panel__body:not(:last-child) {
+    margin-bottom: 20px; }
+  .c-panel__show-more {
+    color: #1294ca; }
+  .c-panel__show-more-icon {
+    top: -2px;
+    margin-right: 5px; }
+  .c-panel--colapsed {
+    flex: 0; }
+
+.c-results__title {
+  line-height: 3.1rem;
+  font-size: 2.4rem;
+  color: #191d25; }
+
+.c-results__num {
+  line-height: 2.3rem;
+  font-size: 1.8rem; }
+
+.c-results__clear {
+  margin-left: 60px;
+  line-height: 2.1rem;
+  font-size: 1.6rem; }
+
+.c-search {
+  display: flex;
   position: relative;
-  display: flex; }
-  .search__control {
-    width: 100%;
-    border: 3px solid #00b4cc;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  padding: 10px; }
+  .c-search__control {
+    position: relative;
+    top: 2px;
     outline: none;
-    color: #9dbfaf; }
-    .search__control:focus {
-      color: #00b4cc; }
-  .search__button {
+    background-color: transparent;
+    width: 100%;
+    line-height: 1.7rem;
+    font-size: 1.4rem; }
+  .c-search__button {
     width: 40px;
-    height: 36px;
-    border: 1px solid #00b4cc;
-    background: #00b4cc;
     text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
     font-size: 20px; }

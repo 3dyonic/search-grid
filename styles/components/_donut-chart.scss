@@ -1,6 +1,17 @@
-.donut-chart {
-  --color-design: #4bbaa7;
-  --color-development: #f85b85;
-  --color-marketing: #e78c58;
+// COMPONENT: DONUT-CHART
+// mockup illustration for dynamically controlling a donut chart
+// TBD: this is actually not as good as building it by JS since the JS calculation are far superior.
+// - this is a mock up hack
+
+$donut-chart: (
+  color-design: color(brand, design),
+  color-development: color(brand, development),
+  color-marketing: color(brand, marketing)
+);
+
+.c-donut-chart {
+  --color-design: #{map-deep-get($donut-chart, color-design)};
+  --color-development: #{map-deep-get($donut-chart, color-development)};
+  --color-marketing: #{map-deep-get($donut-chart, color-marketing)};
   transform: rotate(-90deg);
 }

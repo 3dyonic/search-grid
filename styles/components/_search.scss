@@ -1,29 +1,41 @@
-.search {
-  width: 100%;
+// SEARCH: defines a search box with an input and an icon button
+
+$search: (
+  border-radius: $radius-md,
+  background-color: color(alabaster),
+  padding: $spacing-unit,
+  control: (
+    line-height: type(line-height, control),
+    font-size: type(control)
+  ),
+  button: (
+    width: 40px,
+    font-size: 20px
+  )
+);
+
+.c-search {
+  display: flex; 
   position: relative;
-  display: flex;
+  border-radius: map-deep-get($search, border-radius);
+  background-color: map-deep-get($search, background-color);
+  padding: map-deep-get($search, padding);
+
   &__control {
-    width: 100%;
-    border: 3px solid #00b4cc;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9dbfaf;
-    &:focus {
-      color: #00b4cc;
+    // line height issue for selected font
+    @if $font-adjust {
+      @include font-adjust(2px, $position: relative);
     }
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    line-height: map-deep-get($search, control, line-height);
+    font-size: map-deep-get($search, control, font-size);
   }
+
   &__button {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00b4cc;
-    background: #00b4cc;
+    width: map-deep-get($search, button, width);
     text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
+    font-size: map-deep-get($search, button, font-size);
   }
 }

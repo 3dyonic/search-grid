@@ -1,66 +1,86 @@
+// OBJECTS: CHECKBOX,a simple hack to customize checkbox inputs
+// TBD: no icon was provided
+
+$checkbox: (
+  margin-bottom: spacing(1.5),
+  line-height: type(line-height,control),
+  font-size: type(control),
+  checkmark: (
+    margin-right: spacing(1.5),
+    border: 1px solid color(aluminium),
+    border-radius: $radius-xs,
+    background-color: color(brand, secondary-bg),
+    size: 16px,
+    icon: (
+      width: 5px,
+      height: 8px
+    )
+  ),
+  label: (
+    focus-color: color(brand, selected)
+  )
+);
+
 .o-checkbox {
   display: flex;
-  align-items: center;
   position: relative;
-  margin-bottom: 12px;
+  align-items: center;
   cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  line-height: map-deep-get($checkbox, line-height);
+  font-size: map-deep-get($checkbox, font-size);
   user-select: none;
 
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: map-deep-get($checkbox, margin-bottom);
   }
 
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
     width: 0;
+    height: 0;
+
+    &:checked {
+      ~ .o-checkbox__checkmark {
+        &::after {
+          content: "";
+        }
+      }
+
+      ~ .o-checkbox__label {
+        color: map-deep-get($checkbox, label, focus-color);
+      }
+    }
   }
 
   &__checkmark {
     position: relative;
-    height: 16px;
-    width: 16px;
-    background-color: #eee;
-    border: 1px solid #aaafb9;
-    border-radius: 2px;
-    margin-right: 15px;
+    margin-right: map-deep-get($checkbox, checkmark, margin-right);
+    border: map-deep-get($checkbox, checkmark, border);
+    border-radius: map-deep-get($checkbox, checkmark, border-radius);
+    background-color: map-deep-get($checkbox, checkmark, background-color);
+    width: map-deep-get($checkbox, checkmark, size);
+    height: map-deep-get($checkbox, checkmark, size);
+
+    &::after {
+      // since not icons was provided
+      // used border hack
+      @include border-check(
+        $width: map-deep-get($checkbox, checkmark, icon, width),
+        $height: map-deep-get($checkbox, checkmark, icon, height),
+        $color: map-deep-get($checkbox, label, focus-color)
+      );
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
   }
 
-  /* When the checkbox is checked, add a blue background */
-  input:checked ~ .o-checkbox__checkmark {
-    // background-color: #2196f3;
-  }
-
-  /* Create the checkmark/indicator (hidden when not checked) */
-  &__checkmark::after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-  }
-
-  /* Show the checkmark when checked */
-  input:checked ~ .o-checkbox__checkmark::after {
-    display: block;
-  }
-
-  /* Style the checkmark/indicator */
-  &__checkmark::after {
-    left: 4px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid #1294ca;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  &__label {
+    text-transform: capitalize;
   }
 }

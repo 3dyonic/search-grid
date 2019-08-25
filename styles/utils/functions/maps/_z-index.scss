@@ -1,0 +1,10 @@
+// Context Deep maps with predefined maps for z-index
+@function z-map($keys...) {
+    $map: $z-index;
+    @if $map {
+      @return map-deep-get($map, $keys...);
+    } @else {
+      @error "avalilable keys are defined in '$z-index' map";
+    }
+  }
+  

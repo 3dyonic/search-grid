@@ -1,7 +1,9 @@
 $header: (
   height: 85px,
-  background: linear-gradient(90deg, #242a36 0%, #3c424f 100%),
-  padding-x: $spacing-container
+  background: linear-gradient(90deg, color(ebony-clay) 0%, color(bright-gray) 100%),
+  padding-y: $spacing-container / 2,
+  padding-x: $spacing-container,
+
 );
 
 .header {
@@ -9,7 +11,6 @@ $header: (
   align-items: center;
   justify-content: space-between;
   background: map-get($header, background);
-  padding-right: map-get($header, padding-x);
-  padding-left: map-get($header, padding-x);
-  height: map-get($header, height);
+  padding: map-get($header, padding-y) map-get($header, padding-x);
+  min-height: map-get($header, height);
 }

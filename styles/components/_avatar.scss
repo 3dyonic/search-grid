@@ -1,20 +1,32 @@
-.avatar {
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
+// COMPONENT: AVATAR
+
+$avatar: (
+  size: 95px,
+  border-radius: $radius-round,
+  image: (
+    border: 10px solid color(brand, light)
+  )
+);
+
+.c-avatar {
   position: relative;
+  border-radius: map-deep-get($avatar, border-radius);
+  width: map-deep-get($avatar, size);
+  height: map-deep-get($avatar, size);
   text-align: center;
+
   &__image {
-    border-radius: 50%;
-    overflow: hidden;
+    border: map-deep-get($avatar, image, border);
+    border-radius: map-deep-get($avatar, border-radius);
     width: 100%;
-    border:10px solid white;
+    overflow: hidden;
   }
+
   &__chart {
     position: absolute;
-    overflow: hidden;
-    left: 0;
     top: 0;
-    z-index: 1;
+    left: 0;
+    z-index: z-map(base);
+    overflow: hidden;
   }
 }

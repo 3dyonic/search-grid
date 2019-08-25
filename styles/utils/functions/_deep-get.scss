@@ -6,11 +6,16 @@
 // Deep Map
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    $map: map-get($map, $key);
+    @if map-has-key($map, $key) {
+      $map: map-get($map, $key);
+    } @else {
+      @error "no key #{$key} found";
+    }
   }
   @return $map;
 }
 
-@import "maps/brand";
+@import "maps/color";
 @import "maps/image";
 @import "maps/type";
+@import "maps/z-index";
